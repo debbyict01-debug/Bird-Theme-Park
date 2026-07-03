@@ -429,7 +429,7 @@ h3 {
 }
 
 .status-pill,
-.visual-label {
+.role-badge {
   color: var(--deep-blue);
   background: rgba(255, 252, 245, 0.76);
   border: 1px solid rgba(83, 107, 115, 0.12);
@@ -441,12 +441,6 @@ h3 {
 
 .status-pill {
   padding: 0.45rem 0.9rem;
-}
-
-.visual-label {
-  display: inline-flex;
-  margin-bottom: 0.9rem;
-  padding: 0.3rem 0.75rem;
 }
 
 .hanging-lamp {
@@ -468,183 +462,409 @@ h3 {
 
 .bird-card {
   position: relative;
-  width: min(100%, 25rem);
-  padding: 2rem;
+  width: min(100%, 26rem);
+  min-height: 31rem;
+  padding: 1.2rem;
   background:
-    linear-gradient(180deg, rgba(255, 252, 245, 0.72), rgba(248, 245, 238, 0.86)),
-    repeating-linear-gradient(0deg, transparent 0 15px, rgba(83, 107, 115, 0.04) 16px);
+    radial-gradient(circle at 22% 16%, rgba(239, 210, 125, 0.28), transparent 7rem),
+    linear-gradient(180deg, rgba(238, 246, 244, 0.82), rgba(255, 252, 245, 0.92) 58%),
+    repeating-linear-gradient(0deg, transparent 0 16px, rgba(83, 107, 115, 0.035) 17px);
   border: 1px solid rgba(83, 107, 115, 0.12);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
+  overflow: hidden;
 }
 
-.bird-card::before,
-.bird-card::after {
+.bird-card.photo-card {
+  min-height: auto;
+  padding: 0.55rem;
+  background:
+    linear-gradient(135deg, rgba(255, 252, 245, 0.72), rgba(143, 164, 173, 0.2)),
+    rgba(255, 252, 245, 0.82);
+}
+
+.chairman-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid rgba(83, 107, 115, 0.12);
+  border-radius: calc(var(--radius) - 2px);
+  box-shadow: inset 0 0 0 1px rgba(255, 252, 245, 0.3);
+}
+
+.role-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 4;
+  max-width: 15rem;
+  padding: 0.38rem 0.72rem;
+  color: #fffaf1;
+  background: rgba(83, 107, 115, 0.88);
+  border-color: rgba(239, 210, 125, 0.42);
+  box-shadow: 0 14px 30px rgba(83, 107, 115, 0.2);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.office-scene {
+  position: relative;
+  height: 24.5rem;
+  margin: 0 0 0.85rem;
+  background:
+    linear-gradient(180deg, rgba(143, 164, 173, 0.16), transparent 44%),
+    radial-gradient(circle at 36% 20%, rgba(239, 210, 125, 0.2), transparent 8rem);
+  border: 1px solid rgba(83, 107, 115, 0.1);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.office-scene::before,
+.office-scene::after,
+.office-horizon,
+.office-glow,
+.office-window-line {
   position: absolute;
   content: "";
 }
 
-.bird-card::before {
-  right: 1.2rem;
-  top: 4.2rem;
-  width: 2rem;
-  height: 2rem;
-  background: radial-gradient(circle, rgba(239, 210, 125, 0.9), rgba(239, 210, 125, 0.16) 72%);
-  border-radius: 50%;
-  box-shadow: 0 0 26px rgba(239, 210, 125, 0.68);
+.office-scene::before {
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 0 22%, rgba(255, 252, 245, 0.42) 22% 23%, transparent 23% 77%, rgba(255, 252, 245, 0.42) 77% 78%, transparent 78%),
+    linear-gradient(180deg, transparent 0 18%, rgba(255, 252, 245, 0.36) 18% 19%, transparent 19%);
 }
 
-.bird-card::after {
-  right: 1.6rem;
-  bottom: 5.4rem;
-  width: 1.8rem;
-  height: 2.2rem;
-  background: linear-gradient(180deg, rgba(184, 121, 96, 0.85), rgba(184, 121, 96, 0.5));
-  border-radius: 0.45rem;
-  box-shadow: inset 0 0 0 3px rgba(255, 252, 245, 0.36);
+.office-scene::after {
+  left: -8%;
+  right: -8%;
+  bottom: 4.15rem;
+  height: 5.8rem;
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(83, 107, 115, 0.22), transparent 65%),
+    linear-gradient(180deg, rgba(143, 164, 173, 0.2), rgba(143, 164, 173, 0.04));
+  border-radius: 55% 55% 0 0;
+}
+
+.office-horizon {
+  left: 8%;
+  right: 8%;
+  top: 40%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(83, 107, 115, 0.32), transparent);
+}
+
+.office-glow {
+  left: 1.1rem;
+  top: 2rem;
+  width: 4.4rem;
+  height: 4.4rem;
+  background: radial-gradient(circle, rgba(239, 210, 125, 0.84), rgba(239, 210, 125, 0.12) 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 44px rgba(239, 210, 125, 0.48);
+}
+
+.office-window-line {
+  left: 50%;
+  top: 0;
+  bottom: 7.2rem;
+  width: 1px;
+  background: rgba(255, 252, 245, 0.42);
 }
 
 .bird {
-  position: relative;
-  width: 15rem;
-  height: 17rem;
-  margin: 0 auto 1.2rem;
-  background:
-    radial-gradient(circle at 42% 34%, rgba(255, 252, 245, 0.45), transparent 18%),
-    linear-gradient(145deg, #9aadb5, #6f8790);
-  border: 6px solid rgba(255, 252, 245, 0.82);
-  border-radius: 52% 52% 46% 46%;
-  box-shadow: inset -16px -22px 38px rgba(83, 107, 115, 0.22);
+  position: absolute;
+  left: 50%;
+  bottom: 6rem;
+  z-index: 2;
+  width: 12.2rem;
+  height: 15rem;
+  transform: translateX(-50%);
 }
 
-.crest {
+.bird-shadow {
   position: absolute;
-  top: -1.15rem;
   left: 50%;
-  width: 3.2rem;
-  height: 3.2rem;
-  background: #8199a2;
-  border-radius: 58% 42% 55% 45%;
-  transform: translateX(-50%) rotate(-8deg);
+  bottom: -0.85rem;
+  width: 9.3rem;
+  height: 1.25rem;
+  background: rgba(83, 107, 115, 0.16);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.bird-body {
+  position: absolute;
+  left: 50%;
+  bottom: 1.25rem;
+  width: 7.4rem;
+  height: 8.9rem;
+  background:
+    radial-gradient(circle at 48% 25%, rgba(255, 252, 245, 0.35), transparent 28%),
+    linear-gradient(155deg, #9eb0b7 8%, #6f8790 58%, #5e747b 100%);
+  border: 4px solid rgba(255, 252, 245, 0.58);
+  border-radius: 48% 48% 42% 42%;
+  box-shadow: inset -0.9rem -1.3rem 1.9rem rgba(83, 107, 115, 0.2);
+  transform: translateX(-50%);
+}
+
+.bird-head {
+  position: absolute;
+  left: 50%;
+  top: 0.35rem;
+  width: 6.3rem;
+  height: 5.55rem;
+  background:
+    radial-gradient(circle at 48% 38%, rgba(255, 252, 245, 0.5), transparent 33%),
+    linear-gradient(160deg, #aab9be, #8298a0);
+  border: 4px solid rgba(255, 252, 245, 0.68);
+  border-radius: 55% 55% 48% 48%;
+  box-shadow: inset -0.55rem -0.65rem 1.1rem rgba(83, 107, 115, 0.16);
+  transform: translateX(-50%);
 }
 
 .eye {
   position: absolute;
-  top: 5rem;
-  width: 0.82rem;
-  height: 0.82rem;
+  z-index: 3;
+  top: 2.42rem;
+  width: 0.58rem;
+  height: 0.68rem;
   background: #263034;
-  border-radius: 50%;
-  box-shadow: 0 0 0 5px rgba(255, 252, 245, 0.28);
+  border-radius: 50% 50% 45% 45%;
+  box-shadow: 0 0 0 3px rgba(255, 252, 245, 0.28);
 }
 
 .eye.left {
-  left: 4.6rem;
+  left: 4.2rem;
 }
 
 .eye.right {
-  right: 4.6rem;
+  right: 4.2rem;
 }
 
 .face-blush {
   position: absolute;
-  top: 6.5rem;
-  width: 2.25rem;
-  height: 1.25rem;
+  z-index: 3;
+  top: 3.62rem;
+  width: 1.4rem;
+  height: 0.72rem;
   background: rgba(230, 184, 173, 0.72);
   border-radius: 50%;
 }
 
 .face-blush.left {
-  left: 2.5rem;
+  left: 2.9rem;
 }
 
 .face-blush.right {
-  right: 2.5rem;
+  right: 2.9rem;
 }
 
 .beak {
   position: absolute;
-  top: 6.05rem;
+  z-index: 4;
   left: 50%;
-  width: 1.7rem;
-  height: 1.15rem;
-  background: var(--warm-yellow);
-  border-radius: 58% 42% 50% 50%;
+  background: linear-gradient(180deg, #f3cfb7, #dca485);
   transform: translateX(-50%);
+}
+
+.beak.upper {
+  top: 3.05rem;
+  width: 1.38rem;
+  height: 1rem;
+  border-radius: 68% 68% 45% 45%;
+}
+
+.beak.lower {
+  top: 3.82rem;
+  width: 0.94rem;
+  height: 0.72rem;
+  background: linear-gradient(180deg, #d89776, #bf765d);
+  border-radius: 42% 42% 70% 70%;
 }
 
 .wing {
   position: absolute;
-  right: 1.35rem;
-  bottom: 3.1rem;
-  width: 4rem;
-  height: 6.8rem;
-  background: rgba(83, 107, 115, 0.32);
-  border-radius: 60% 35% 60% 40%;
+  z-index: 3;
+  bottom: 2.4rem;
+  width: 2.75rem;
+  height: 6.5rem;
+  background: linear-gradient(180deg, rgba(83, 107, 115, 0.42), rgba(83, 107, 115, 0.2));
+  border: 1px solid rgba(255, 252, 245, 0.2);
+  border-radius: 70% 35% 70% 40%;
 }
 
-.badge {
+.wing.left {
+  left: 1.2rem;
+  transform: rotate(7deg);
+}
+
+.wing.right {
+  right: 1.2rem;
+  transform: scaleX(-1) rotate(7deg);
+}
+
+.bird-tail {
   position: absolute;
   left: 50%;
-  bottom: 1.6rem;
-  padding: 0.25rem 0.8rem;
-  color: #fffaf1;
-  background: var(--red-clay);
-  border-radius: 999px;
-  font-size: 0.82rem;
+  bottom: 0.1rem;
+  z-index: 1;
+  width: 2.25rem;
+  height: 3rem;
+  background: #6b838a;
+  border-radius: 40% 40% 70% 70%;
+  transform: translateX(-50%);
+}
+
+.foot {
+  position: absolute;
+  bottom: 0.78rem;
+  z-index: 5;
+  width: 1.6rem;
+  height: 0.8rem;
+  border-bottom: 3px solid rgba(184, 121, 96, 0.78);
+  border-left: 2px solid rgba(184, 121, 96, 0.78);
+  border-radius: 0 0 50% 50%;
+}
+
+.foot.left {
+  left: 4rem;
+  transform: rotate(4deg);
+}
+
+.foot.right {
+  right: 4rem;
+  transform: scaleX(-1) rotate(4deg);
+}
+
+.mini-desk {
+  position: absolute;
+  left: 0.9rem;
+  right: 0.9rem;
+  bottom: 0.75rem;
+  z-index: 3;
+  height: 6.2rem;
+}
+
+.desk-top {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4.4rem;
+  background:
+    linear-gradient(90deg, rgba(83, 107, 115, 0.06) 1px, transparent 1px),
+    linear-gradient(180deg, #c7ad8b, #967554);
+  background-size: 32px 100%, auto;
+  border: 1px solid rgba(83, 107, 115, 0.16);
+  border-radius: var(--radius);
+  box-shadow: inset 0 0.8rem 1.4rem rgba(255, 252, 245, 0.16);
+}
+
+.report-sheet,
+.mini-stamp,
+.red-clay-jar {
+  position: absolute;
+  z-index: 2;
+}
+
+.report-sheet {
+  left: 1rem;
+  bottom: 0.72rem;
+  width: 6.9rem;
+  height: 3.3rem;
+  background:
+    linear-gradient(180deg, rgba(83, 107, 115, 0.16) 1px, transparent 1px),
+    rgba(255, 252, 245, 0.88);
+  background-size: 100% 0.68rem;
+  border: 1px solid rgba(83, 107, 115, 0.16);
+  border-radius: 0.35rem;
+  transform: rotate(-3deg);
+}
+
+.report-sheet::before {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.32rem;
+  color: var(--deep-blue);
+  content: "栗米報表";
+  font-size: 0.62rem;
   font-weight: 900;
+}
+
+.mini-stamp {
+  left: 50%;
+  bottom: 0.85rem;
+  width: 2.15rem;
+  height: 2.2rem;
+  background: var(--red-clay);
+  border-radius: 0.35rem;
+  box-shadow:
+    0 -0.65rem 0 -0.2rem rgba(83, 107, 115, 0.56),
+    0 0.45rem 0 rgba(83, 107, 115, 0.2);
+  transform: translateX(-50%);
+}
+
+.red-clay-jar {
+  right: 1.05rem;
+  bottom: 0.76rem;
+  width: 2.9rem;
+  height: 3.3rem;
+  background: linear-gradient(180deg, #c48770, var(--red-clay));
+  border: 1px solid rgba(83, 107, 115, 0.18);
+  border-radius: 0.55rem 0.55rem 0.4rem 0.4rem;
+  box-shadow: inset 0 0.45rem 0 rgba(255, 252, 245, 0.22);
+}
+
+.red-clay-jar::before {
+  position: absolute;
+  left: 50%;
+  top: -0.35rem;
+  width: 2rem;
+  height: 0.5rem;
+  background: #6f8790;
+  border-radius: 999px;
+  content: "";
   transform: translateX(-50%);
 }
 
 .desk {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.48rem 0.65rem;
+  padding: 0.72rem 0.75rem 0.2rem;
+  background: rgba(255, 252, 245, 0.5);
+  border: 1px solid rgba(83, 107, 115, 0.09);
+  border-radius: var(--radius);
 }
 
 .desk span {
-  padding: 0.35rem 0.7rem;
-  background: rgba(222, 208, 184, 0.55);
-  border-radius: 999px;
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.38rem;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
   color: var(--deep-blue);
-  font-size: 0.86rem;
+  font-size: 0.78rem;
   font-weight: 800;
 }
 
-.desk-props {
-  display: grid;
-  grid-template-columns: 1fr 3rem 3.5rem;
-  align-items: end;
-  gap: 0.7rem;
-  margin-top: 1rem;
-}
-
-.paper-stack {
-  height: 2.2rem;
-  background:
-    linear-gradient(180deg, rgba(83, 107, 115, 0.15) 1px, transparent 1px),
-    rgba(255, 252, 245, 0.86);
-  background-size: 100% 0.48rem;
-  border: 1px solid rgba(83, 107, 115, 0.14);
-  border-radius: 0.35rem;
-}
-
-.stamp-block {
-  height: 1.7rem;
-  background: var(--red-clay);
-  border-radius: 0.35rem;
-  box-shadow: 0 -0.45rem 0 rgba(83, 107, 115, 0.24);
-}
-
-.corn-dots {
-  height: 1.8rem;
-  background:
-    radial-gradient(circle, var(--warm-yellow) 0 0.22rem, transparent 0.25rem) 0 0 / 0.82rem 0.82rem,
-    rgba(222, 208, 184, 0.3);
-  border-radius: 999px;
+.desk b {
+  display: inline-grid;
+  width: 1.35rem;
+  height: 1.35rem;
+  flex: 0 0 auto;
+  place-items: center;
+  color: #fffaf1;
+  background: rgba(83, 107, 115, 0.76);
+  border-radius: 50%;
+  font-size: 0.66rem;
+  line-height: 1;
 }
 
 .signboard {
@@ -1193,20 +1413,43 @@ blockquote {
   }
 
   .bird-card {
-    padding: 1.2rem;
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .role-badge {
+    position: relative;
+    top: auto;
+    right: auto;
+    max-width: none;
+    margin-bottom: 0.75rem;
+  }
+
+  .office-scene {
+    height: 22.25rem;
   }
 
   .bird {
-    width: 12.8rem;
-    height: 14.5rem;
+    bottom: 5.55rem;
+    width: 11.4rem;
+    height: 14rem;
   }
 
   .eye.left {
-    left: 3.8rem;
+    left: 3.85rem;
   }
 
   .eye.right {
-    right: 3.8rem;
+    right: 3.85rem;
+  }
+
+  .mini-desk {
+    left: 0.55rem;
+    right: 0.55rem;
+  }
+
+  .desk {
+    grid-template-columns: 1fr;
   }
 
   .notice-board article {

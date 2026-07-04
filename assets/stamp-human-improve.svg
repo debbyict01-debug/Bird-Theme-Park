@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-label="人類需改善印章">
+  <rect x="24" y="24" width="272" height="172" rx="18" fill="#fffaf1" stroke="#536b73" stroke-width="10"/>
+  <path d="M96 85h128M96 121h128M96 157h90" stroke="#536b73" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="226" cy="156" r="19" fill="none" stroke="#c9805a" stroke-width="8"/>
+  <path d="M238 169l25 25" stroke="#c9805a" stroke-width="8" stroke-linecap="round"/>
+  <text x="160" y="58" text-anchor="middle" font-family="'Microsoft JhengHei','Noto Sans TC',sans-serif" font-size="32" font-weight="900" fill="#536b73">人類需改善</text>
+</svg>

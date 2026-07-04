@@ -1,0 +1,243 @@
+.page-main {
+  background:
+    radial-gradient(circle at 84% 10%, rgba(239, 210, 125, 0.16), transparent 18rem),
+    linear-gradient(180deg, #f8f5ee 0%, #eef2ef 50%, #f8f5ee 100%);
+}
+
+.page-hero,
+.page-section {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.page-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.7fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: clamp(3.5rem, 7vw, 6rem) 0;
+}
+
+.page-hero p,
+.page-section p {
+  color: var(--muted-ink);
+}
+
+.page-hero-card,
+.map-node,
+.profile-card,
+.event-file,
+.gallery-card,
+.shop-item,
+.application-panel {
+  background: rgba(255, 252, 245, 0.82);
+  border: 1px solid rgba(83, 107, 115, 0.12);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.page-hero-card {
+  padding: 0.65rem;
+}
+
+.page-hero-card img {
+  display: block;
+  width: 100%;
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.page-section {
+  padding: clamp(3rem, 6vw, 5.5rem) 0;
+}
+
+.section-kicker {
+  max-width: 760px;
+  margin-bottom: 1.6rem;
+}
+
+.section-kicker p {
+  margin-bottom: 0;
+}
+
+.map-trail {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.map-node {
+  position: relative;
+  min-height: 15rem;
+  padding: 1.2rem;
+  overflow: hidden;
+}
+
+.map-node::before {
+  position: absolute;
+  right: -1.6rem;
+  top: -1.6rem;
+  width: 7rem;
+  height: 7rem;
+  background: rgba(143, 166, 177, 0.14);
+  border-radius: 50%;
+  content: "";
+}
+
+.node-icon {
+  display: grid;
+  width: 3.5rem;
+  height: 3.5rem;
+  place-items: center;
+  margin-bottom: 0.8rem;
+  background: rgba(239, 210, 125, 0.28);
+  border-radius: 50%;
+  font-size: 1.55rem;
+}
+
+.node-number,
+.tag {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  padding: 0.18rem 0.6rem;
+  color: var(--deep-blue);
+  background: rgba(255, 252, 245, 0.7);
+  border: 1px solid rgba(83, 107, 115, 0.12);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.node-number {
+  margin-bottom: 0.8rem;
+}
+
+.profile-grid,
+.mode-grid,
+.event-grid,
+.gallery-grid,
+.shop-grid,
+.application-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.profile-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.profile-card,
+.event-file,
+.gallery-card,
+.shop-item,
+.application-panel {
+  padding: 1.25rem;
+}
+
+.profile-card ul,
+.event-file dl {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted-ink);
+}
+
+.mode-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mode-card {
+  padding: 1rem;
+  background: rgba(238, 246, 244, 0.62);
+  border: 1px solid rgba(83, 107, 115, 0.1);
+  border-radius: var(--radius);
+}
+
+.event-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.event-file {
+  border-top: 5px solid var(--warm-yellow);
+}
+
+.event-file.alert {
+  border-top-color: var(--red-clay);
+}
+
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.application-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.application-panel {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.gallery-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gallery-card img,
+.shop-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin-bottom: 0.9rem;
+  border-radius: var(--radius);
+}
+
+.shop-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.shop-item .stamp-card {
+  min-height: auto;
+  margin-bottom: 0.8rem;
+  padding: 0.3rem;
+}
+
+.shop-item .stamp-card img {
+  aspect-ratio: auto;
+  margin: 0;
+  object-fit: contain;
+}
+
+@media (max-width: 980px) {
+  .page-hero,
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-trail,
+  .mode-grid,
+  .event-grid,
+  .gallery-grid,
+  .shop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .page-hero,
+  .page-section {
+    width: min(100% - 1.5rem, 1180px);
+  }
+
+  .map-trail,
+  .mode-grid,
+  .event-grid,
+  .gallery-grid,
+  .shop-grid,
+  .application-grid {
+    grid-template-columns: 1fr;
+  }
+}

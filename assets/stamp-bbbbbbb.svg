@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 220" role="img" aria-label="BBBBBBB 嚴重不通過印章">
+  <rect x="24" y="24" width="332" height="172" rx="18" fill="#fffaf1" stroke="#c9805a" stroke-width="10"/>
+  <text x="190" y="124" text-anchor="middle" font-family="Georgia,serif" font-size="64" font-weight="900" fill="#c9805a">BBBBBBB</text>
+  <text x="190" y="172" text-anchor="middle" font-family="'Microsoft JhengHei','Noto Sans TC',sans-serif" font-size="30" font-weight="900" fill="#c9805a">嚴重不通過</text>
+</svg>

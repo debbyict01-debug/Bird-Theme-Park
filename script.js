@@ -59,6 +59,39 @@ const scratchResults = {
   },
 };
 
+const humanReviewResults = [
+  {
+    status: "審核狀態：暫准通過",
+    stamp: "APPROVED",
+    message: "今日人類表現：尚可。放風權益未明顯受損，但仍須持續補栗米。",
+  },
+  {
+    status: "審核狀態：人類需改善",
+    stamp: "待補件",
+    message: "今日人類表現：說明不足。請補交抓癢服務紀錄與栗米進貨明細。",
+  },
+  {
+    status: "審核狀態：黃燈警戒",
+    stamp: "黃燈警戒",
+    message: "今日人類表現：偵測到異常笑聲。董事長正在評估你是否在討論他的私人行為。",
+  },
+  {
+    status: "審核狀態：重大缺失",
+    stamp: "BBBBBBB",
+    message: "今日人類表現：抓癢品質、放風安排與說話分寸皆需重新訓練。",
+  },
+];
+
+const chairmanQuotes = [
+  "栗米可以少，帳不能亂。",
+  "海風很自由，帳目要清楚。",
+  "你以為我在發呆，其實我在審核。",
+  "可愛不是免責條款。",
+  "人類最大的問題，就是以為小鳥不懂管理。",
+  "秩序不是限制，是鳥類美學。",
+  "本董事長不接受摸頭，但接受高品質抓癢。",
+];
+
 const renderApproval = (id, detail) => {
   const target = document.getElementById(id);
   if (!target) {
@@ -172,4 +205,18 @@ document.getElementById("scratchButton")?.addEventListener("click", () => {
       message: "請送出服務內容，董事長將親自評分。",
     },
   );
+});
+
+document.getElementById("humanButton")?.addEventListener("click", () => {
+  const index = Math.floor(Math.random() * humanReviewResults.length);
+  renderApproval("humanResult", humanReviewResults[index]);
+});
+
+document.getElementById("quoteButton")?.addEventListener("click", () => {
+  const index = Math.floor(Math.random() * chairmanQuotes.length);
+  renderApproval("quoteResult", {
+    status: "審核狀態：本鳥已閱",
+    stamp: "語錄",
+    message: chairmanQuotes[index],
+  });
 });

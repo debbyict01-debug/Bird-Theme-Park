@@ -11,12 +11,15 @@
   <body>
     <header class="site-header" aria-label="主導覽">
       <a class="brand" href="./index.html#top"><span class="brand-mark">董</span><span>黃燈灰董事長主題樂園</span></a>
-      <nav class="nav-links">
-        <a href="./index.html#top">首頁</a>
-        <a href="./chairman.html">董事長</a>
-        <a href="./petition.html">請示</a>
-        <a href="./events.html">事件簿</a>
-        <a href="./brand.html">品牌</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav">選單</button>
+      <nav class="nav-links" id="siteNav" aria-label="頁面導覽">
+        <a href="./index.html">首頁</a>
+        <a href="./park.html">園區地圖</a>
+        <a href="./chairman.html">董事長檔案</a>
+        <a href="./cases.html">事件簿</a>
+        <a href="./petition.html">請示董事長</a>
+        <a href="./gallery.html">影像館</a>
+        <a href="./shop.html">商品部</a>
       </nav>
     </header>
 
@@ -25,35 +28,76 @@
         <div>
           <p class="eyebrow">Park Map</p>
           <h1>園區地圖</h1>
-          <p class="subtitle">不是六張普通卡片，是董事長親自規劃的治理路線。</p>
-          <p>遊客將沿著海風、栗米、紅土與黃燈指引，依序接受園區秩序教育與咖灰董事長高層檢視。</p>
+          <p class="subtitle">本園區由董事長親自規劃，每一處設施皆兼具療癒、秩序與不可違抗性。</p>
+          <p>桌機版以簡化地圖排列，手機版會轉為縱向導覽路線。請沿著海風、黃燈與董事長印章前進。</p>
           <div class="hero-actions">
             <a class="button primary" href="./petition.html">請示董事長</a>
-            <a class="button secondary" href="./events.html">查看事件檔案</a>
+            <a class="button secondary" href="./cases.html">查看事件檔案館</a>
           </div>
         </div>
         <figure class="page-hero-card">
-          <img src="./assets/kahui-chairman-hero-v2.png" alt="咖灰董事長在海邊辦公室監督園區" />
+          <img src="./assets/kahui-chairman-hero-v2.png" alt="咖灰董事長正面正式形象" />
         </figure>
       </section>
 
       <section class="page-section">
         <div class="section-kicker">
           <p class="eyebrow">Explore</p>
-          <h2>園區探索路線</h2>
-          <p>桌機版以地圖節點呈現，手機版會像關卡一樣往下探索。</p>
+          <h2>八大園區設施</h2>
+          <p>每一站都經過董事長查帳、蓋章與高層凝望。</p>
         </div>
         <div class="map-trail">
-          <article class="map-node"><span class="node-number">01</span><span class="node-icon">📋</span><h3>董事長辦公室</h3><p>最高權力中心。黃燈、栗米報表與小印章都在此等待審核。</p></article>
-          <article class="map-node"><span class="node-number">02</span><span class="node-icon">🌽</span><h3>栗米財務部</h3><p>所有栗米進出帳皆須登記。說不清楚，就進入待補件。</p></article>
-          <article class="map-node"><span class="node-number">03</span><span class="node-icon">🌊</span><h3>海風巡邏大道</h3><p>你以為你在散步，其實你正在被巡查。</p></article>
-          <article class="map-node"><span class="node-number">04</span><span class="node-icon">🪨</span><h3>紅土補給站</h3><p>董事長指定礦物質補給。非鳥類遊客請勿舔食。</p></article>
-          <article class="map-node"><span class="node-number">05</span><span class="node-icon">⚠️</span><h3>人類反省區</h3><p>忘記放風、亂講話、抓癢失敗者，請坐下接受海風吹。</p></article>
-          <article class="map-node"><span class="node-number">06</span><span class="node-icon">🕷️</span><h3>蜘蛛鳥高空巡查區</h3><p>怨念值過高時啟動。請勿直視超過三秒。</p></article>
-          <article class="map-node"><span class="node-number">07</span><span class="node-icon">🗂️</span><h3>董事長事件檔案館</h3><p>收錄所有人類錯誤、官方裁決與後續改善方案。</p></article>
-          <article class="map-node"><span class="node-number">08</span><span class="node-icon">🏷️</span><h3>董事長授權商品部</h3><p>貼圖、桌布、BBB 貼紙與語錄卡都須啾唧審核。</p></article>
+          <article class="map-node">
+            <span class="node-number">01</span><span class="node-icon">📋</span>
+            <h3>董事長辦公室</h3>
+            <p>園區最高權力中心。內有迷你辦公桌、黃燈、栗米報表與董事長專用小印章。</p>
+            <a class="button secondary" href="./petition.html">前往審核台</a>
+          </article>
+          <article class="map-node">
+            <span class="node-number">02</span><span class="node-icon">🌽</span>
+            <h3>栗米財務部</h3>
+            <p>負責管理園區所有栗米進出帳。任何未經登記的栗米，皆視為可疑資產。</p>
+            <a class="button secondary" href="./petition.html">提交預算</a>
+          </article>
+          <article class="map-node">
+            <span class="node-number">03</span><span class="node-icon">🌊</span>
+            <h3>海風巡邏大道</h3>
+            <p>海風吹來的地方，也是董事長巡邏的地方。遊客可在此接受小鳥高層檢視。</p>
+            <a class="button secondary" href="./gallery.html">查看影像</a>
+          </article>
+          <article class="map-node">
+            <span class="node-number">04</span><span class="node-icon">🪨</span>
+            <h3>紅土補給站</h3>
+            <p>提供董事長指定礦物質補給。非鳥類遊客請勿舔食。</p>
+            <a class="button secondary" href="./chairman.html">查看禁忌</a>
+          </article>
+          <article class="map-node">
+            <span class="node-number">05</span><span class="node-icon">⚠️</span>
+            <h3>人類反省區</h3>
+            <p>專為忘記放風、抓癢失敗、亂講話的人類設置，提供小板凳與董事長凝視服務。</p>
+            <a class="button secondary" href="./cases.html">查看案例</a>
+          </article>
+          <article class="map-node">
+            <span class="node-number">06</span><span class="node-icon">🕷️</span>
+            <h3>蜘蛛鳥高空巡查區</h3>
+            <p>當董事長怨念值過高，將啟動蜘蛛鳥模式：倒掛、翻跟斗、爬籠頂、啾啾唧唧。</p>
+            <a class="button secondary" href="./cases.html">查看事件</a>
+          </article>
+          <article class="map-node">
+            <span class="node-number">07</span><span class="node-icon">🗂️</span>
+            <h3>董事長事件檔案館</h3>
+            <p>保存人類錯誤、官方裁決與對應印章，供後續反省使用。</p>
+            <a class="button secondary" href="./cases.html">進入檔案館</a>
+          </article>
+          <article class="map-node">
+            <span class="node-number">08</span><span class="node-icon">🏷️</span>
+            <h3>董事長授權商品部</h3>
+            <p>展示貼圖、明信片、BBB 貼紙與桌布。所有商品皆須經董事長啾唧審核。</p>
+            <a class="button secondary" href="./shop.html">查看商品部</a>
+          </article>
         </div>
       </section>
     </main>
+    <script src="./site.js"></script>
   </body>
 </html>

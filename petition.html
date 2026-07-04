@@ -9,28 +9,109 @@
     <link rel="stylesheet" href="./site-pages.css" />
   </head>
   <body>
-    <header class="site-header"><a class="brand" href="./index.html#top"><span class="brand-mark">董</span><span>黃燈灰董事長主題樂園</span></a><nav class="nav-links"><a href="./park.html">園區</a><a href="./chairman.html">董事長</a><a href="./events.html">事件簿</a><a href="./gallery.html">影像館</a><a href="./brand.html">品牌</a></nav></header>
+    <header class="site-header" aria-label="主導覽">
+      <a class="brand" href="./index.html#top"><span class="brand-mark">董</span><span>黃燈灰董事長主題樂園</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav">選單</button>
+      <nav class="nav-links" id="siteNav" aria-label="頁面導覽">
+        <a href="./index.html">首頁</a>
+        <a href="./park.html">園區地圖</a>
+        <a href="./chairman.html">董事長檔案</a>
+        <a href="./cases.html">事件簿</a>
+        <a href="./petition.html">請示董事長</a>
+        <a href="./gallery.html">影像館</a>
+        <a href="./shop.html">商品部</a>
+      </nav>
+    </header>
+
     <main class="page-main">
       <section class="page-hero">
         <div>
           <p class="eyebrow">Chairman Review Desk</p>
           <h1>請示董事長</h1>
-          <p class="subtitle">遊客進入董事長辦公室，提出申請，接受批示。</p>
-          <p>結果僅供參考，但董事長本人非常認真。</p>
+          <p class="subtitle">遊客進入董事長辦公室，提出申請，接受咖灰董事長正式批示。</p>
+          <p>結果僅供參考，但董事長本人非常認真。請保持帳目清楚，並避免觸發 BBB 或 BBBBBBB。</p>
+          <div class="event-meta">
+            <span class="chairman-stamp stamp-read">本鳥已閱</span>
+            <span class="chairman-stamp stamp-bbb">BBB</span>
+            <span class="tag">今日狀態：正在觀察人類</span>
+          </div>
         </div>
-        <figure class="page-hero-card"><img src="./assets/kahui-chairman-hero-v2.png" alt="董事長辦公室" /></figure>
+        <figure class="page-hero-card">
+          <img src="./assets/kahui-chairman-hero-v2.png" alt="咖灰董事長在海邊辦公室審核台" />
+        </figure>
       </section>
+
       <section class="page-section">
+        <div class="section-kicker">
+          <p class="eyebrow">Applications</p>
+          <h2>董事長辦公室審核台</h2>
+          <p>四個申請項目會輸出董事長批示、印章狀態，以及是否需要進入人類反省區。</p>
+        </div>
         <div class="application-grid">
-          <article class="application-panel"><h3>董事長今日心情</h3><button class="button primary" id="moodButton" type="button">請示今日心情</button><div id="moodResult" class="result-box approval-slip" role="status"><span class="approval-title">董事長批示</span><span class="approval-status">審核狀態：待請示</span><strong class="approval-stamp">待觀察</strong><p>尚未請示。董事長正在整理羽毛。</p></div></article>
-          <article class="application-panel"><h3>栗米預算審核器</h3><label for="cornInput">今日栗米數量</label><input id="cornInput" type="number" min="0" inputmode="numeric" placeholder="例如：12" /><button class="button secondary" id="cornButton" type="button">送交審核</button><div id="cornResult" class="result-box approval-slip" role="status"><span class="approval-title">董事長批示</span><span class="approval-status">審核狀態：等待帳目</span><strong class="approval-stamp">待觀察</strong><p>請輸入有效栗米數量，董事長不接受模糊帳目。</p></div></article>
-          <article class="application-panel"><h3>人類發言審核器</h3><label for="speechInput">請輸入一句話</label><textarea id="speechInput" rows="4" placeholder="例如：董事長今天很可愛"></textarea><button class="button secondary" id="speechButton" type="button">提交發言</button><div id="speechResult" class="result-box approval-slip" role="status"><span class="approval-title">董事長批示</span><span class="approval-status">審核狀態：待審核</span><strong class="approval-stamp">本鳥已讀</strong><p>審核結果待命中。</p></div></article>
-          <article class="application-panel"><h3>抓癢服務評分器</h3><label for="scratchSelect">選擇本次服務方式</label><select id="scratchSelect"><option value="認真抓脖子">認真抓脖子</option><option value="抓臉頰旁邊">抓臉頰旁邊</option><option value="隨便亂抓">隨便亂抓</option><option value="假裝有抓">假裝有抓</option><option value="偷偷摸頭">偷偷摸頭</option></select><button class="button secondary" id="scratchButton" type="button">評分服務</button><div id="scratchResult" class="result-box approval-slip" role="status"><span class="approval-title">董事長批示</span><span class="approval-status">審核狀態：服務待評</span><strong class="approval-stamp">待觀察</strong><p>請送出服務內容，董事長將親自評分。</p></div></article>
-          <article class="application-panel"><h3>今日人類表現評鑑</h3><button class="button secondary" id="humanButton" type="button">送出今日表現</button><div id="humanResult" class="result-box approval-slip" role="status"><span class="approval-title">董事長批示</span><span class="approval-status">審核狀態：待評鑑</span><strong class="approval-stamp">待觀察</strong><p>今日人類尚未接受董事長評分。</p></div></article>
-          <article class="application-panel"><h3>隨機董事長語錄</h3><button class="button secondary" id="quoteButton" type="button">抽取語錄</button><div id="quoteResult" class="result-box approval-slip" role="status"><span class="approval-title">董事長批示</span><span class="approval-status">審核狀態：本鳥已閱</span><strong class="approval-stamp">語錄</strong><p>栗米可以少，帳不能亂。</p></div></article>
+          <article class="application-panel">
+            <h3>董事長今日心情</h3>
+            <button class="button primary" id="moodButton" type="button">請示今日心情</button>
+            <div id="moodResult" class="result-box approval-slip" role="status">
+              <span class="approval-title">董事長批示</span>
+              <span class="approval-status">審核狀態：等待請示</span>
+              <strong class="chairman-stamp stamp-pending">待補件</strong>
+              <p>請按下按鈕，等待董事長今日心情批示。</p>
+              <small>是否需要進入人類反省區：待判定</small>
+            </div>
+          </article>
+
+          <article class="application-panel">
+            <h3>栗米預算審核器</h3>
+            <label for="cornInput">今日栗米數量</label>
+            <input id="cornInput" type="number" min="0" inputmode="numeric" placeholder="例如：12" />
+            <button class="button secondary" id="cornButton" type="button">送交預算審核</button>
+            <div id="cornResult" class="result-box approval-slip" role="status">
+              <span class="approval-title">董事長批示</span>
+              <span class="approval-status">審核狀態：等待栗米報表</span>
+              <strong class="chairman-stamp stamp-pending">待補件</strong>
+              <p>請輸入今日栗米數量，董事長不接受模糊帳目。</p>
+              <small>是否需要進入人類反省區：待判定</small>
+            </div>
+          </article>
+
+          <article class="application-panel">
+            <h3>人類發言審核器</h3>
+            <label for="speechInput">請輸入一句話</label>
+            <textarea id="speechInput" rows="4" placeholder="例如：董事長今天很可愛"></textarea>
+            <button class="button secondary" id="speechButton" type="button">送交發言審核</button>
+            <div id="speechResult" class="result-box approval-slip" role="status">
+              <span class="approval-title">董事長批示</span>
+              <span class="approval-status">審核狀態：等待發言</span>
+              <strong class="chairman-stamp stamp-pending">待補件</strong>
+              <p>請輸入一句話，董事長會判斷是否需要列入觀察。</p>
+              <small>是否需要進入人類反省區：待判定</small>
+            </div>
+          </article>
+
+          <article class="application-panel">
+            <h3>抓癢服務評分器</h3>
+            <label for="scratchSelect">請選擇本次抓癢服務</label>
+            <select id="scratchSelect">
+              <option value="">請選擇服務項目</option>
+              <option value="認真抓脖子">認真抓脖子</option>
+              <option value="抓臉頰旁邊">抓臉頰旁邊</option>
+              <option value="隨便亂抓">隨便亂抓</option>
+              <option value="假裝有抓">假裝有抓</option>
+              <option value="偷偷摸頭">偷偷摸頭</option>
+            </select>
+            <button class="button secondary" id="scratchButton" type="button">提交抓癢驗收</button>
+            <div id="scratchResult" class="result-box approval-slip" role="status">
+              <span class="approval-title">董事長批示</span>
+              <span class="approval-status">審核狀態：等待服務紀錄</span>
+              <strong class="chairman-stamp stamp-pending">待補件</strong>
+              <p>請選擇抓癢服務方式，董事長會給出正式驗收。</p>
+              <small>是否需要進入人類反省區：待判定</small>
+            </div>
+          </article>
         </div>
       </section>
     </main>
+    <script src="./site.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

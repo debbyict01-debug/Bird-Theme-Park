@@ -9,15 +9,75 @@
     <link rel="stylesheet" href="./site-pages.css" />
   </head>
   <body>
-    <header class="site-header"><a class="brand" href="./index.html#top"><span class="brand-mark">董</span><span>黃燈灰董事長主題樂園</span></a><nav class="nav-links"><a href="./park.html">園區</a><a href="./chairman.html">董事長</a><a href="./petition.html">請示</a><a href="./gallery.html">影像館</a><a href="./brand.html">品牌</a></nav></header>
+    <header class="site-header" aria-label="主導覽">
+      <a class="brand" href="./index.html#top"><span class="brand-mark">董</span><span>黃燈灰董事長主題樂園</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav">選單</button>
+      <nav class="nav-links" id="siteNav" aria-label="頁面導覽">
+        <a href="./index.html">首頁</a>
+        <a href="./park.html">園區地圖</a>
+        <a href="./chairman.html">董事長檔案</a>
+        <a href="./cases.html">事件簿</a>
+        <a href="./petition.html">請示董事長</a>
+        <a href="./gallery.html">影像館</a>
+        <a href="./shop.html">商品部</a>
+      </nav>
+    </header>
+
     <main class="page-main">
-      <section class="page-hero"><div><p class="eyebrow">Authorized Goods</p><h1>董事長授權商品部</h1><p class="subtitle">所有商品上架前，皆須經董事長親自啾唧審核。</p><p>第一版先做展示入口，未接購物車。</p></div><figure class="page-hero-card"><img src="./assets/brand-logo-horizontal.svg" alt="黃燈灰董事長主題樂園文字標誌" /></figure></section>
-      <section class="page-section"><div class="shop-grid">
-        <article class="shop-item"><div class="stamp-card"><img src="./assets/stamp-read.svg" alt="本鳥已閱" /></div><h3>董事長語錄貼圖</h3><p>查帳語錄、高冷啾唧與日常批示。狀態：即將開放。</p></article>
-        <article class="shop-item"><div class="stamp-card"><img src="./assets/stamp-yellow-alert.svg" alt="黃燈警戒" /></div><h3>蜘蛛鳥怨念明信片</h3><p>紀念放風權益受損而啟動高空巡查的珍貴時刻。</p></article>
-        <article class="shop-item"><div class="stamp-card"><img src="./assets/stamp-bbb.svg" alt="BBB" /></div><h3>BBBBBBB 抓癢事故貼紙</h3><p>服務品質未達標準時，貼上即可，不需多言。</p></article>
-        <article class="shop-item"><div class="stamp-card"><img src="./assets/brand-logo-mark.svg" alt="園區章" /></div><h3>海風很自由桌布</h3><p>莫蘭迪海邊、柔和黃燈與董事長查帳精神。</p></article>
-      </div></section>
+      <section class="page-hero">
+        <div>
+          <p class="eyebrow">Authorized Goods</p>
+          <h1>董事長授權商品部</h1>
+          <p class="subtitle">本區未來將展示董事長授權之貼圖、明信片、桌布、吊飾與其他高級鳥類治理商品。</p>
+          <p>所有商品上架前，皆須經董事長親自啾唧審核。第一版先做成即將開放展示區。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="./gallery.html">查看影像館</a>
+            <a class="button secondary" href="./petition.html">送交授權請示</a>
+          </div>
+        </div>
+        <figure class="page-hero-card">
+          <img src="./assets/brand-logo-horizontal.svg" alt="黃燈灰董事長主題樂園品牌標誌" />
+        </figure>
+      </section>
+
+      <section class="page-section">
+        <div class="section-kicker">
+          <p class="eyebrow">Shop Preview</p>
+          <h2>即將開放商品</h2>
+          <p>第一版不接購物車，僅提供商品入口與狀態。</p>
+        </div>
+        <div class="shop-grid">
+          <article class="shop-item">
+            <div class="stamp-card"><img src="./assets/stamp-read.svg" alt="本鳥已閱印章" /></div>
+            <span class="tag">即將開放</span>
+            <h3>董事長語錄貼圖</h3>
+            <p>收錄董事長日常批示、查帳語錄與高冷啾唧。適合用於提醒朋友帳目要清楚。</p>
+            <button class="button secondary" type="button">查看詳情</button>
+          </article>
+          <article class="shop-item">
+            <div class="stamp-card"><img src="./assets/stamp-yellow-alert.svg" alt="黃燈警戒印章" /></div>
+            <span class="tag">怨念預購中</span>
+            <h3>蜘蛛鳥怨念明信片</h3>
+            <p>紀念董事長因放風權益受損而啟動高空巡查的珍貴時刻。適合寄給忘記補栗米的人類。</p>
+            <button class="button secondary" type="button">查看詳情</button>
+          </article>
+          <article class="shop-item">
+            <div class="stamp-card"><img src="./assets/stamp-bbbbbbb.svg" alt="BBBBBBB 印章" /></div>
+            <span class="tag">服務異常限定</span>
+            <h3>BBBBBBB 抓癢事故貼紙</h3>
+            <p>當服務品質未達董事長標準時，請直接貼上本貼紙。無需多言，BBBBBBB 已代表一切。</p>
+            <button class="button secondary" type="button">查看詳情</button>
+          </article>
+          <article class="shop-item">
+            <div class="stamp-card"><img src="./assets/brand-logo-mark.svg" alt="咖灰品牌章" /></div>
+            <span class="tag">免費下載籌備中</span>
+            <h3>海風很自由桌布</h3>
+            <p>莫蘭迪海邊、柔和黃燈與董事長查帳精神。適合所有需要秩序感的桌面。</p>
+            <button class="button secondary" type="button">免費下載籌備中</button>
+          </article>
+        </div>
+      </section>
     </main>
+    <script src="./site.js"></script>
   </body>
 </html>

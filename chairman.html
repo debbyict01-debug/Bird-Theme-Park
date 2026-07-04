@@ -9,36 +9,137 @@
     <link rel="stylesheet" href="./site-pages.css" />
   </head>
   <body>
-    <header class="site-header"><a class="brand" href="./index.html#top"><span class="brand-mark">董</span><span>黃燈灰董事長主題樂園</span></a><nav class="nav-links"><a href="./park.html">園區</a><a href="./petition.html">請示</a><a href="./events.html">事件簿</a><a href="./gallery.html">影像館</a><a href="./brand.html">品牌</a></nav></header>
+    <header class="site-header" aria-label="主導覽">
+      <a class="brand" href="./index.html#top"><span class="brand-mark">董</span><span>黃燈灰董事長主題樂園</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav">選單</button>
+      <nav class="nav-links" id="siteNav" aria-label="頁面導覽">
+        <a href="./index.html">首頁</a>
+        <a href="./park.html">園區地圖</a>
+        <a href="./chairman.html">董事長檔案</a>
+        <a href="./cases.html">事件簿</a>
+        <a href="./petition.html">請示董事長</a>
+        <a href="./gallery.html">影像館</a>
+        <a href="./shop.html">商品部</a>
+      </nav>
+    </header>
+
     <main class="page-main">
       <section class="page-hero">
         <div>
           <p class="eyebrow">Chairman File</p>
           <h1>董事長檔案</h1>
-          <p class="subtitle">咖灰不是吉祥物。他是整個園區的權力核心。</p>
-          <p>正式身份：創辦鳥、董事長、園區稽核總監、栗米財務最高審核者。</p>
+          <p class="subtitle">咖灰，黃燈灰董事長主題樂園創辦鳥、董事長、園區稽核總監、栗米財務最高審核者。</p>
+          <p>他不是吉祥物。他是整個品牌世界觀的權力核心。外表圓潤柔和，內在是一位要求很多的高階主管。</p>
         </div>
-        <figure class="page-hero-card"><img src="./assets/kahui-chairman-hero-v2.png" alt="咖灰董事長正式形象" /></figure>
+        <figure class="page-hero-card">
+          <img src="./assets/kahui-chairman-hero-v2.png" alt="咖灰董事長正式正面形象" />
+        </figure>
       </section>
 
       <section class="page-section">
         <div class="profile-grid">
-          <article class="profile-card"><h2>基本資料</h2><ul><li>羽色：奶油灰白頭部、低飽和灰藍身體。</li><li>眼神：看似親切，實則正在審核。</li><li>辦公室：常駐海邊，配備黃燈、報表與印章。</li><li>核心標語：海風很自由，帳目要清楚。</li></ul></article>
-          <article class="profile-card"><h2>喜好與禁忌</h2><ul><li>喜歡高品質、位置正確、力道適中的抓癢。</li><li>重視放風權益與栗米帳目。</li><li>不接受亂摸頭。</li><li>不接受「掉下來買新的」替換論。</li></ul></article>
+          <article class="profile-card">
+            <span class="chairman-stamp stamp-read">本鳥已閱</span>
+            <h2>基本資料</h2>
+            <ul>
+              <li>正式身份：黃燈灰董事長主題樂園創辦鳥、董事長、園區稽核總監。</li>
+              <li>核心標語：海風很自由，帳目要清楚。</li>
+              <li>主要職責：監督園區秩序、審核栗米預算、巡查人類行為。</li>
+              <li>管理風格：親切但有審核壓迫感。</li>
+            </ul>
+          </article>
+          <article class="profile-card">
+            <span class="chairman-stamp stamp-approved">暫准通過</span>
+            <h2>外觀特徵</h2>
+            <ul>
+              <li>頭部偏奶油灰白，身體為低飽和灰藍。</li>
+              <li>翅膀略帶灰綠或深灰藍，黑色圓眼，粉膚色鳥喙。</li>
+              <li>圓潤，但不能變成蛋或麻糬。</li>
+              <li>正面輪廓需有胸口、翅膀與站姿，保留真實鸚鵡比例。</li>
+            </ul>
+          </article>
+          <article class="profile-card">
+            <span class="chairman-stamp stamp-alert">黃燈警戒</span>
+            <h2>喜好</h2>
+            <ul>
+              <li>乾淨帳目、穩定放風、高品質抓癢。</li>
+              <li>海風、黃燈、紅土補給與栗米報表。</li>
+              <li>人類保持禮貌並主動補件。</li>
+            </ul>
+          </article>
+          <article class="profile-card">
+            <span class="chairman-stamp stamp-human">人類需改善</span>
+            <h2>禁忌</h2>
+            <ul>
+              <li>不接受亂摸頭。</li>
+              <li>不接受「掉下來買新的」等替換論。</li>
+              <li>不接受假裝抓癢、敷衍服務與模糊帳目。</li>
+              <li>不加髮髻、眉毛、奇怪人類五官，也不穿西裝。</li>
+            </ul>
+          </article>
         </div>
       </section>
 
       <section class="page-section">
-        <div class="section-kicker"><p class="eyebrow">Modes</p><h2>董事長模式一覽</h2></div>
+        <div class="section-kicker">
+          <p class="eyebrow">Modes</p>
+          <h2>董事長特殊型態</h2>
+        </div>
         <div class="mode-grid">
-          <article class="mode-card"><h3>穩重董事長</h3><p>正面凝視、微微昂首，正在觀察人類是否可靠。</p></article>
-          <article class="mode-card"><h3>恰北北模式</h3><p>對秩序鬆散與帳目不清保持高度不滿。</p></article>
-          <article class="mode-card"><h3>蜘蛛鳥模式</h3><p>倒掛、攀爬、翻跟斗，通常代表怨念正在累積。</p></article>
-          <article class="mode-card"><h3>查帳模式</h3><p>栗米數量、發票與補給理由都要交代清楚。</p></article>
-          <article class="mode-card"><h3>抓癢驗收模式</h3><p>服務品質不足時，董事長回覆：BBBBBBB。</p></article>
-          <article class="mode-card"><h3>凝望稽核模式</h3><p>沒有出聲，不代表通過。只是正在建立檔案。</p></article>
+          <article class="mode-card"><h3>穩重董事長</h3><p>正面凝視鏡頭，親切但正在審核。</p></article>
+          <article class="mode-card"><h3>恰北北模式</h3><p>人類犯錯或栗米不清楚時啟動，黃燈警戒同步亮起。</p></article>
+          <article class="mode-card"><h3>蜘蛛鳥模式</h3><p>怨念值過高時倒掛、翻跟斗、爬籠頂，進行高空巡查。</p></article>
+          <article class="mode-card"><h3>查帳模式</h3><p>專注審核栗米報表，任何模糊帳目都會被列入觀察。</p></article>
+          <article class="mode-card"><h3>抓癢驗收模式</h3><p>品質不佳時直接輸出 BBBBBBB，不另行補充說明。</p></article>
+          <article class="mode-card"><h3>凝望稽核模式</h3><p>安靜凝視人類，實際上正在建立內部檔案。</p></article>
+          <article class="mode-card"><h3>裝無辜模式</h3><p>看似無辜，通常代表董事長已經掌握更多資訊。</p></article>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="section-kicker">
+          <p class="eyebrow">Quotes</p>
+          <h2>董事長語錄</h2>
+        </div>
+        <div class="quote-grid">
+          <blockquote>栗米可以少，帳不能亂。</blockquote>
+          <blockquote>海風很自由，帳目要清楚。</blockquote>
+          <blockquote>你以為我在發呆，其實我在審核。</blockquote>
+          <blockquote>可愛不是免責條款。</blockquote>
+          <blockquote>人類最大的問題，就是以為小鳥不懂管理。</blockquote>
+          <blockquote>秩序不是限制，是鳥類美學。</blockquote>
+          <blockquote>本董事長不接受摸頭，但接受高品質抓癢。</blockquote>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="section-kicker">
+          <p class="eyebrow">Visual Standard</p>
+          <h2>正式形象照與真實照片區</h2>
+          <p>完整品牌規範圖先集中在此頁，首頁只使用正式咖灰主視覺。</p>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="./assets/kahui-chairman-hero-v2.png" alt="咖灰正式正面形象" />
+            <span class="tag">正式形象照</span>
+            <h3>園區最高負責鳥</h3>
+            <p>正面、穩重、眼神看向鏡頭，具備董事長審核壓迫感。</p>
+          </article>
+          <article class="gallery-card">
+            <img src="./assets/brand-board-v1.png" alt="黃燈灰董事長品牌規範圖" />
+            <span class="tag">品牌規範</span>
+            <h3>咖灰形象標準</h3>
+            <p>作為後續生成圖、印章與商品延伸的統一參考。</p>
+          </article>
+          <article class="gallery-card">
+            <img src="./assets/kahui-chairman-office.png" alt="咖灰董事長辦公室情境" />
+            <span class="tag">辦公情境</span>
+            <h3>海邊辦公室</h3>
+            <p>黃燈、栗米報表、小印章與紅土補給罐皆為正式道具。</p>
+          </article>
         </div>
       </section>
     </main>
+    <script src="./site.js"></script>
   </body>
 </html>

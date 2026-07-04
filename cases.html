@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>董事長影像館｜黃燈灰董事長主題樂園</title>
+    <title>董事長事件簿｜黃燈灰董事長主題樂園</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./site-pages.css" />
   </head>
   <body>
-    <header class="site-header" aria-label="主導覽">
+    <header class="site-header">
       <a class="brand" href="./index.html#top"><span class="brand-mark">董</span><span>黃燈灰董事長主題樂園</span></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav">選單</button>
-      <nav class="nav-links" id="siteNav" aria-label="頁面導覽">
+      <nav class="nav-links" id="siteNav">
         <a href="./index.html">首頁</a>
         <a href="./park.html">園區地圖</a>
         <a href="./chairman.html">董事長檔案</a>
@@ -22,27 +22,23 @@
         <a href="./shop.html">商品部</a>
       </nav>
     </header>
-
     <main class="page-main">
       <section class="page-hero">
         <div>
-          <p class="eyebrow">Gallery</p>
-          <h1>董事長影像館</h1>
-          <p class="subtitle">這裡放真實咖灰與正式主視覺，避免網站只剩 AI 插畫感。</p>
-          <p>分類包含咖灰的凝望、恰北北現場、蜘蛛鳥紀錄、放風日常、抓癢驗收、董事長辦公照與人類偷拍失敗照。</p>
+          <p class="eyebrow">Incident Archive</p>
+          <h1>董事長事件簿</h1>
+          <p class="subtitle">本區記錄董事長日常治理案例，供人類學習、反省與避免再次犯錯。</p>
+          <p>每份檔案皆包含事件等級、董事長反應、官方判定、人類檢討、改善方案與對應印章。</p>
         </div>
-        <figure class="page-hero-card">
-          <img src="./assets/brand-board-v1.png" alt="咖灰董事長品牌與影像規範" />
-        </figure>
+        <figure class="page-hero-card"><img src="./assets/stamp-bbb.svg" alt="BBB 不通過章" /></figure>
       </section>
-
       <section class="page-section">
         <div class="section-kicker">
-          <p class="eyebrow">Photo Categories</p>
-          <h2>影像分類</h2>
-          <p>第一版先使用靜態圖片卡片，後續可替換成更多真實咖灰照片。</p>
+          <p class="eyebrow">Case Files</p>
+          <h2>園區內部稽核檔案</h2>
+          <p>事件內容使用展開／收合形式，避免頁面過長。</p>
         </div>
-        <div class="gallery-grid" id="galleryGrid"></div>
+        <div class="event-grid" id="casesGrid"></div>
       </section>
     </main>
     <script src="./site-data.js"></script>
